@@ -7,7 +7,7 @@
 [![WowUp on Discord](https://img.shields.io/static/v1?label=Discord&message=WowUp&color=7289DA)](https://discord.gg/rk4F5aD)
 [![WowUp on Patreon](https://img.shields.io/static/v1?label=Patreon&message=WowUp&color=f96854)](https://www.patreon.com/jliddev)
 
-This is the repository for our [WowUp](https://wowup.io) client with [CurseForge](https://curseforge.com) support for Windows, Mac, and Linux.
+This is the repository for our [WowUp](https://wowup.io) client with [CurseForge](https://curseforge.com) support for Windows, and Linux.
 
 ## WowUp
 
