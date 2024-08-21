@@ -88,7 +88,7 @@ export class CurseAddonProvider extends AddonProvider {
   public readonly canBatchFetch = true;
   public readonly allowEdit = true;
 
-  public adRequired = true;
+  public adRequired = false;
   public enabled = true;
 
   public constructor(

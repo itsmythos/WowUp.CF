@@ -104,7 +104,6 @@
   </a>
 
   <div
-    *ngIf="(sessionService.adSpace$ | async) === false"
     class="tab hover-bg-secondary-2"
     (click)="toggleCollapse()"
     matTooltip="{{ (isCollapsed$ | async) ? ('PAGES.HOME.EXPAND_BUTTON_TITLE' | translate) : '' }}"
@@ -124,15 +123,5 @@
     </mat-icon>
 
     <div class="tab-title">{{ "PAGES.HOME.COLLAPSE_BUTTON_TITLE" | translate }}</div>
-  </div>
-
-  <!-- AD FRAME -->
-  <div *ngIf="sessionService.adSpace$ | async" class="ad-space">
-    <div class="tab hover-bg-secondary-4 addon-info-btn" (click)="onClickAdExplainer()">
-      {{ "ADS.AD_EXPLAINER_BUTTON" | translate }}
-    </div>
-    <div class="ad">
-      <app-webview *ngFor="let params of adPageParams$ | async" [options]="params"></app-webview>
-    </div>
   </div>
 </div>
