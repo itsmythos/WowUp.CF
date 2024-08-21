@@ -18,12 +18,6 @@ class AppUpdater {
   }
 
   public async checkForUpdates(): Promise<void> {
-    try {
-      const result = await autoUpdater.checkForUpdates();
-      log.info(`checkForUpdates`, result);
-    } catch (e) {
-      log.error("checkForUpdates", e);
-    }
   }
 
   private initIpcHandlers() {
