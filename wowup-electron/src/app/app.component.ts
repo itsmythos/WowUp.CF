@@ -277,12 +277,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private async showRequiredDialogs(): Promise<void> {
     try {
-      const shouldShowConsent = await this.shouldShowConsentDialog();
-      if (shouldShowConsent) {
-        this.openConsentDialog();
-        return;
-      }
-
+      this._analyticsService.setTelemetryEnabled(false).catch(console.error);
       this.showPreLoad$.next(false);
     } catch (e) {
       console.error(e);
