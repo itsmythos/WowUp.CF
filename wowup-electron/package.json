@@ -13,8 +13,8 @@
     "url": "https://github.com/WowUp/WowUp.CF.git"
   },
   "author": {
-    "name": "WowUp LLC",
-    "email": "zakrn@wowup.io"
+    "name": "WowUp LLC & Mythos",
+    "email": "root@mythos.zip"
   },
   "main": "app/main.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "ng:serve": "ng serve",
     "ng:serve:web": "ng serve -c web -o",
     "electron:serve-tsc": "tsc -p tsconfig.serve.json",
-    "electron:serve": "wait-on tcp:4200 && npm run ow-electron:serve-tsc && npx ow-electron . --serve",
+    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npx ow-electron . --serve",
     "electron:local": "npm run build:prod && npx ow-electron .",
     "electron:build": "npm run build:prod && ow-electron-builder build",
     "electron:build:local": "npm run build:prod && ow-electron-builder build -c electron-builder-local.json",
