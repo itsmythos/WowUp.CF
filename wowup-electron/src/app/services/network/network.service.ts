@@ -169,7 +169,7 @@ export class NetworkService {
       this._httpClient
         .get<T>(url.toString(), { headers: { ...CACHE_CONTROL_HEADERS } })
         .pipe(first(), timeout(timeoutMs ?? AppConfig.defaultHttpTimeoutMs))
-    ) as Promise<T>;
+    );
   }
 
   public getText(url: URL | string, timeoutMs?: number): Promise<string> {
@@ -177,6 +177,6 @@ export class NetworkService {
       this._httpClient
         .get(url.toString(), { responseType: "text", headers: { ...CACHE_CONTROL_HEADERS } })
         .pipe(first(), timeout(timeoutMs ?? AppConfig.defaultHttpTimeoutMs))
-    ) as Promise<string>;
+    );
   }
 }

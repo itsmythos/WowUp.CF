@@ -141,7 +141,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.electronService.appUpdate$.subscribe((evt) => {
       if (evt.state === AppUpdateState.Error) {
-        if (evt.error.indexOf("dev-app-update.yml") === -1) {
+        if (evt.error?.indexOf("dev-app-update.yml") === -1) {
           this._snackbarService.showErrorSnackbar("APP.WOWUP_UPDATE.UPDATE_ERROR");
         }
       } else if (evt.state === AppUpdateState.Downloaded) {
@@ -277,7 +277,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private async showRequiredDialogs(): Promise<void> {
     try {
-      this._analyticsService.setTelemetryEnabled(false).catch(console.error);
+      await this._analyticsService.setTelemetryEnabled(false)
       this.showPreLoad$.next(false);
     } catch (e) {
       console.error(e);
